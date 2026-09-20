@@ -1,0 +1,38 @@
+﻿using System;
+
+class Program
+{
+	static void Main()
+	{
+		int liczba;
+
+		do
+		{
+			Console.Write("Podaj liczbę całkowitą z przedziału 10-99: ");
+			string tekst = Console.ReadLine();
+
+			// Przy tym fragmencie skorzystałem z pomocy ChatGPT,
+			// ponieważ nie wiedziałem, jak poprawnie sprawdzić dane za pomocą TryParse.
+			if (!int.TryParse(tekst, out liczba))
+			{
+				Console.WriteLine("Błąd: podana wartość nie jest liczbą.");
+				continue;
+			}
+
+			if (liczba < 10 || liczba > 99)
+			{
+				Console.WriteLine("Błąd: liczba musi być z przedziału od 10 do 99.");
+			}
+
+		} while (liczba < 10 || liczba > 99);
+
+		if (liczba % 2 == 0)
+		{
+			Console.WriteLine("Liczba " + liczba + " jest parzysta.");
+		}
+		else
+		{
+			Console.WriteLine("Liczba " + liczba + " jest nieparzysta.");
+		}
+	}
+}

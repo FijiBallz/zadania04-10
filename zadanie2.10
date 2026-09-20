@@ -1,0 +1,17 @@
+﻿using System;
+
+class Program
+{
+	static void Main()
+	{
+		Console.Write("Podaj dowolne zdanie: ");
+		string zdanie = Console.ReadLine();
+
+		// Przy tym fragmencie skorzystałem z pomocy ChatGPT,
+		// ponieważ nie wiedziałem, jak wykorzystać metodę Split do policzenia słów.
+		string[] slowa = zdanie.Split(' ');
+
+		Console.WriteLine("Liczba słów: " + slowa.Length);
+		Console.WriteLine("Zdanie wielkimi literami: " + zdanie.ToUpper());
+	}
+}
